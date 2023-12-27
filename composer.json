@@ -5,10 +5,10 @@
     "codeigniter",
     "paydisini"],
   "type": "library",
-  "stability": "stable",
   "license": "MIT",
   "authors": [{
     "name": "Rud Az"
   }],
+  "minimum-stability": "stable",
   "require": {}
 }
