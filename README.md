@@ -22,13 +22,13 @@ $this->paydisini->config(['apiKey' => 'Api_key_kamu']);
 
 ```php
 $this->paydisini->transaction([
-'unique_code' => Kode_Transaksi_Kamu,
-'service' => Tipe_Pembayaran_Paydisini,
-'amount' => Jumlah_pembayaran,
-'note' => Catatan_Kamu,
-'ewallet_phone' => Nomor_telpon_customer,
-'type_fee' => Isi_1_fee_ditanggung_customer_isi_2_fee_ditanggung_merchant,
-'return_url' => Url_redirect_setelah_pembayaran,
+'unique_code' => 'Kode_Transaksi_Kamu',
+'service' => 'Tipe_Pembayaran_Paydisini',
+'amount' => 'Jumlah_pembayaran',
+'note' => 'Catatan_Kamu',
+'ewallet_phone' => 'Nomor_telpon_customer',
+'type_fee' => 'Isi_1_fee_ditanggung_customer_isi_2_fee_ditanggung_merchant',
+'return_url' => 'Url_redirect_setelah_pembayaran',
 ]);
 ```
 
@@ -40,7 +40,7 @@ Parameter harus menggunakan array seperti contoh diatas
 
 ```php
 $this->paydisini->statusTransaction([
-'unique_code' => Isi_unique_code_hasil_transaksi_kamu
+'unique_code' => 'Isi_unique_code_hasil_transaksi_kamu'
 ]);
 ```
 
