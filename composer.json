@@ -1,0 +1,13 @@
+{
+  "name": "ridaz/paydisini-codeigniter",
+  "description": "Libraries codeigniter 3 payment gateway paydisini",
+  "keywords": ["php",
+    "codeigniter",
+    "paydisini"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [{
+    "name": "Rud Az"
+  }],
+  "require": {}
+}
