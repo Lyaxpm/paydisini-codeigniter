@@ -22,16 +22,16 @@ $this->paydisini->config(['apiKey' => 'Api key mu']);
 
 ```php
 $this->paydisini->transaction([
-'unique_code' => '123456',
-'service' => 2,
-'amount' => 100000,
-'note' => 'New Transaction',
-'ewallet_phone' => '081111111',
-'type_fee' => 2,
-'return_url' => 'https://url.com'
+'unique_code' => Kode Transaksi Kamu,
+'service' => Tipe Pembayaran Paydisini,
+'amount' => Jumlah pembayaran,
+'note' => Catatan Kamu,
+'ewallet_phone' => Nomor telpon customer,
+'type_fee' => 1 fee ditanggung customer 2 fee ditanggung merchant,
+'return_url' => url redirect setelah pembayaran,
 ]);
 ```
 
 `unique_code`, `service`, `amount`, `note`, `ewallet_phone`, `type_fee`, `return_url`
 
-Masing-masing parameter menggunakan array
+Parameter harus menggunakan array seperti contoh diatas
