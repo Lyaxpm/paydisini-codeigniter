@@ -61,12 +61,12 @@ class Paydisini {
     ]);
   }
 
-  public function panduanPembayaran() {
+  public function panduanPembayaran($params = []) {
     return Paydisini::Request(self::URL, [
       'key' => $this->apiKey,
       'request' => 'payment_guide',
-      'service' => $service,
-      'signature' => Paydisini::signature($service . 'PaymentChannel')
+      'service' => $params['service'],
+      'signature' => Paydisini::signature($params['service'] . 'PaymentChannel')
     ]);
   }
 
