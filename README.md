@@ -79,7 +79,7 @@ Halo saya <a href="https://facebook.com/rud.az.9" target="_blank">Rud Az</a>,
 Saya bukan siapa-siapa tapi saya mempunyai cita-cita menguasai dunia :v 
 oh iya saya juga open jasa integrasi payment gateway ke Paydisini hehe
 
-kalo dokumentasi diatas kurang jelas langsung me website official <a href="https://paydisini.co.id" target="_blank">Paydisini</a>
+kalo dokumentasi diatas kurang jelas langsung ke website official <a href="https://paydisini.co.id" target="_blank">Paydisini</a>
 
 ## Donasi
 
