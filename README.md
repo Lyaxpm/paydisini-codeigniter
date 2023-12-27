@@ -27,8 +27,8 @@ $this->paydisini->transaction([
 'amount' => Jumlah_pembayaran,
 'note' => Catatan_Kamu,
 'ewallet_phone' => Nomor_telpon_customer,
-'type_fee' => isi_1_fee_ditanggung_customer_isi_2_fee_ditanggung_merchant,
-'return_url' => url_redirect_setelah_pembayaran,
+'type_fee' => Isi_1_fee_ditanggung_customer_isi_2_fee_ditanggung_merchant,
+'return_url' => Url_redirect_setelah_pembayaran,
 ]);
 ```
 
