@@ -40,7 +40,7 @@ Parameter harus menggunakan array seperti contoh diatas
 
 ```php
 $this->paydisini->statusTransaction([
-'unique_code' => 'Isi_unique_code_hasil_transaksi_kamu'
+'unique_code' => Isi_unique_code_hasil_transaksi_kamu
 ]);
 ```
 
