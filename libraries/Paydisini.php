@@ -15,13 +15,13 @@ class Paydisini {
 
   protected $apiKey;
 
-  public function config($data = ['apiKey' => null]) {
-    Paydisini::$apiKey = $data['apiKey'];
-  }
+  public function config($data) {
+  return $this->apiKey = $data['apiKey'];
+}
 
   public function transaction($params = []) {
     return Paydisini::Request(self::URL, [
-      'key' => Paydisini::$apiKey,
+      'key' => $this->apiKey,
       'request' => 'new',
       'unique_code' => $params['unique_code'],
       'service' => $params['service'],
@@ -31,47 +31,47 @@ class Paydisini {
       'ewallet_phone' => $params['ewallet_phone'],
       'type_fee' => $params['type_fee'],
       'return_url' => $params['return_url'],
-      'signature' => Paydisini::signature(Paydisini::$apiKey . $params['unique_code'] . $params['service'] . $params['amount'] . 10800 . 'NewTransaction')
+      'signature' => Paydisini::signature($this->apiKey . $params['unique_code'] . $params['service'] . $params['amount'] . 10800 . 'NewTransaction')
     ]);
   }
 
   public function statusTransaction($params = []) {
     return Paydisini::Request(self::URL, [
-      'key' => Paydisini::$apiKey,
+      'key' => $this->apiKey,
       'request' => 'status',
       'unique_code' => $params['unique_code'],
-      'signature' => Paydisini::signature(Paydisini::$apiKey . $params['unique_code'] . 'StatusTransaction')
+      'signature' => Paydisini::signature($this->apiKey . $params['unique_code'] . 'StatusTransaction')
     ]);
   }
 
   public function cancelTransaction($params = []) {
     return Paydisini::Request(self::URL, [
-      'key' => Paydisini::$apiKey,
+      'key' => $this->apiKey,
       'request' => 'cancel',
       'unique_code' => $params['unique_code'],
-      'signature' => Paydisini::signature(Paydisini::$apiKey . $params['unique_code'] . 'CancelTransaction')
+      'signature' => Paydisini::signature($this->apiKey . $params['unique_code'] . 'CancelTransaction')
     ]);
   }
 
   public function chanel() {
     return Paydisini::Request(self::URL, [
-      'key' => Paydisini::$apiKey,
+      'key' => $this->apiKey,
       'request' => 'payment_channel',
-      'signature' => Paydisini::signature(Paydisini::$apiKey . 'PaymentChannel')
+      'signature' => Paydisini::signature($this->apiKey . 'PaymentChannel')
     ]);
   }
 
   public function panduanPembayaran() {
     return Paydisini::Request(self::URL, [
-      'key' => Paydisini::$apiKey,
+      'key' => $this->apiKey,
       'request' => 'payment_guide',
       'service' => $service,
-      'signature' => Paydisini::signature(Paydisini::$apiKey . $service . 'PaymentChannel')
+      'signature' => Paydisini::signature($this->apiKey . $service . 'PaymentChannel')
     ]);
   }
 
   public static function signature($signature) {
-    return md5(Paydisini::$apiKey . $signature);
+    return md5($this->apiKey . $signature);
   }
 
   public static function Request($url, $body) {
