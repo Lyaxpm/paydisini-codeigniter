@@ -1,5 +1,7 @@
 <?php
 
+namespace Rudaz\Paydisini;
+
 /**
 * Lib codeigniter 3 payment gateway Paydisini
 *
