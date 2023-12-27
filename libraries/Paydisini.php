@@ -16,8 +16,8 @@ class Paydisini {
   protected $apiKey;
 
   public function config($data) {
-  return $this->apiKey = $data['apiKey'];
-}
+    return $this->apiKey = $data['apiKey'];
+  }
 
   public function transaction($params = []) {
     return Paydisini::Request(self::URL, [
@@ -31,7 +31,7 @@ class Paydisini {
       'ewallet_phone' => $params['ewallet_phone'],
       'type_fee' => $params['type_fee'],
       'return_url' => $params['return_url'],
-      'signature' => Paydisini::signature($this->apiKey . $params['unique_code'] . $params['service'] . $params['amount'] . 10800 . 'NewTransaction')
+      'signature' => Paydisini::signature($params['unique_code'] . $params['service'] . $params['amount'] . 10800 . 'NewTransaction')
     ]);
   }
 
@@ -40,7 +40,7 @@ class Paydisini {
       'key' => $this->apiKey,
       'request' => 'status',
       'unique_code' => $params['unique_code'],
-      'signature' => Paydisini::signature($this->apiKey . $params['unique_code'] . 'StatusTransaction')
+      'signature' => Paydisini::signature($params['unique_code'] . 'StatusTransaction')
     ]);
   }
 
@@ -49,7 +49,7 @@ class Paydisini {
       'key' => $this->apiKey,
       'request' => 'cancel',
       'unique_code' => $params['unique_code'],
-      'signature' => Paydisini::signature($this->apiKey . $params['unique_code'] . 'CancelTransaction')
+      'signature' => Paydisini::signature($params['unique_code'] . 'CancelTransaction')
     ]);
   }
 
@@ -57,7 +57,7 @@ class Paydisini {
     return Paydisini::Request(self::URL, [
       'key' => $this->apiKey,
       'request' => 'payment_channel',
-      'signature' => Paydisini::signature($this->apiKey . 'PaymentChannel')
+      'signature' => Paydisini::signature('PaymentChannel')
     ]);
   }
 
@@ -66,11 +66,11 @@ class Paydisini {
       'key' => $this->apiKey,
       'request' => 'payment_guide',
       'service' => $service,
-      'signature' => Paydisini::signature($this->apiKey . $service . 'PaymentChannel')
+      'signature' => Paydisini::signature($service . 'PaymentChannel')
     ]);
   }
 
-  public static function signature($signature) {
+  public function signature($signature) {
     return md5($this->apiKey . $signature);
   }
 
