@@ -14,5 +14,6 @@ Silahkan taruh di bagian function `__construct()`
 
 ```php
 $this->paydisini = new Rudaz\Paydisini\Paydisini();
-    $this->paydisini->config(['apiKey' => 'Api key mu']);
+
+$this->paydisini->config(['apiKey' => 'Api key mu']);
 ```
