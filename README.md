@@ -80,3 +80,9 @@ Saya bukan siapa-siapa tapi saya mempunyai cita-cita menguasai dunia :v
 oh iya saya juga open jasa integrasi payment gateway ke Paydisini hehe
 
 kalo dokumentasi diatas kurang jelas langsung me website official <a href="https://paydisini.co.id" target="_blank">Paydisini</a>
+
+## Donasi
+
+bila kalian ingin donsi saya sangat amat berterimakasih
+
+Trakteer : https://trakteer.id/RudAz
