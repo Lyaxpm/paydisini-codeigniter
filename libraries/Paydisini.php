@@ -3,7 +3,7 @@
 namespace Rudaz\Paydisini;
 
 /**
-* Lib codeigniter 3 payment gateway Paydisini
+* Lib codeigniter payment gateway Paydisini
 *
 * @author   Rud Az <rzombok@gmail.com>
 * @see      https://github.com/lyaxpm/paydisini-codeigniter
