@@ -35,3 +35,13 @@ $this->paydisini->transaction([
 `unique_code`, `service`, `amount`, `note`, `ewallet_phone`, `type_fee`, `return_url`
 
 Parameter harus menggunakan array seperti contoh diatas
+
+## Memeriksa Status Transaksi
+
+```php
+$this->paydisini->statusTransaction([
+'unique_code' => 'Isi_unique_code_hasil_transaksi_kamu'
+]);
+```
+
+Parameter `unique_code` menggunakan array yang berisi kode pembayaran dari transaksi yang kamu buat
