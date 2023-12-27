@@ -9,6 +9,11 @@
   "authors": [{
     "name": "Rud Az"
   }],
+  "autoload": {
+        "psr-4": {
+            "Rudaz\\Paydisini\\": "libraries/"
+        }
+    },
   "minimum-stability": "stable",
   "require": {}
 }
