@@ -45,3 +45,29 @@ $this->paydisini->statusTransaction([
 ```
 
 Parameter `unique_code` menggunakan array yang berisi kode pembayaran dari transaksi yang kamu buat
+
+## Membatalkan Transaksi
+
+```php
+$this->paydisini->cancelTransaction([
+'unique_code' => 'Isi_unique_code_hasil_transaksi_kamu'
+]);
+```
+
+Parameter `unique_code` menggunakan array yang berisi kode pembayaran dari transaksi yang kamu buat
+
+## Melihat Payment Channel
+
+```php
+$this->paydisini->chanel();
+```
+
+## Melihat Panduan Pembayaran
+
+```php
+$this->paydisini->panduanPembayaran([
+'service' => 'Service_id_pembayaran_paydisini'
+]);
+```
+
+Parameter `service` menggunakan array yang berisi service id metode pembayaran dari Paydisini
