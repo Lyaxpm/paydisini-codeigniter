@@ -54,4 +54,50 @@ class Example {
     ]);
 
   }
+
+  /*
+  * Example Callback 
+  */
+
+  public function callback() {
+
+    if ($_SERVER['REMOTE_ADDR'] == '154.26.137.133') {
+      $key = $_POST['key'];
+      $unique_code = $_POST['unique_code'];
+      $status = $_POST['status'];
+      $signature = $_POST['signature'];
+      $sign = md5('YOUR_APIKEY' . $payment_id . 'CallbackStatus');
+
+      // panggil function callback
+      $callback = $this->callback([
+        'unique_code' => $unique_code,
+        'status' => $status
+      ]);
+
+      // validasi key
+      if ($key == $callback['key']) {
+
+        // validasi callback
+        if ($signature != $callback['signature']) {
+          $result = array('success' => false);
+        } else if ($status == 'Success') {
+          //mysqli_query('YOUR QUERY IF PAYMENT SUCCESS');
+          $result = array('success' => true);
+        } else if ($status == 'Canceled') {
+          //mysqli_query('YOUR QUERY IF PAYMENT CANCELED');
+          $result = array('success' => true);
+        } else {
+          $result = array('success' => false);
+        }
+        header('Content-type: application/json');
+        echo json_encode($result);
+      } else {
+        die('gagal koneksi callback!');
+      }
+    } else {
+      die('gagal koneksi callback!');
+    }
+
+  }
+  
 }
