@@ -66,9 +66,8 @@ class Example {
       $unique_code = $_POST['unique_code'];
       $status = $_POST['status'];
       $signature = $_POST['signature'];
-      $sign = md5('YOUR_APIKEY' . $payment_id . 'CallbackStatus');
-
-      // panggil function callback
+      
+     // panggil function callback
       $callback = $this->callback([
         'unique_code' => $unique_code,
         'status' => $status
