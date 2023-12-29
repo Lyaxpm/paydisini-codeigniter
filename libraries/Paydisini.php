@@ -70,6 +70,10 @@ class Paydisini {
     ]);
   }
 
+  public function callback($params = []) {
+    return ['key' => $this->apiKey, 'signature' => Paydisini::signature($params['unique_code'] . $params['status'] . 'CallbackStatus')];
+  }
+
   public function signature($signature) {
     return md5($this->apiKey . $signature);
   }
