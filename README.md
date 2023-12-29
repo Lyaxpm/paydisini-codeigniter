@@ -86,9 +86,11 @@ $this->paydisini->callback([
 ```php
 array(
 'key' => 'Berisikan_apiKey_anda',
-'signature' => 'Berisikan_signature_otomatis_yang_dibuat_oleh_libary'
+'signature' => 'Berisikan_signature_otomatis_yang_dibuat_oleh_library'
 );
 ```
+
+untuk request lebih lengkap silahkan cek file `Example.php`
 
 
 ## Tentang author
