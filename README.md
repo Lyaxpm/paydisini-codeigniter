@@ -81,7 +81,7 @@ $this->paydisini->callback([
 ]);
 ```
 
-<b>Output atau response yang dihasilkan oleh request diatas adalah:</b>
+**Output atau response yang dihasilkan oleh request diatas adalah :**
 
 ```php
 array(
