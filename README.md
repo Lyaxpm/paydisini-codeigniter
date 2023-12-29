@@ -72,6 +72,25 @@ $this->paydisini->panduanPembayaran([
 
 Parameter `service` menggunakan array yang berisi service id metode pembayaran dari Paydisini
 
+## Callback
+
+```php
+$this->paydisini->callback([
+'unique_code' => 'Unique_code_transaction',
+'status' => 'Status_transaction'
+]);
+```
+
+<b>Output atau response yang dihasilkan oleh request diatas adalah:</b>
+
+```php
+array(
+'key' => 'Berisikan_apiKey_anda',
+'signature' => 'Berisikan_signature_otomatis_yang_dibuat_oleh_libary'
+);
+```
+
+
 ## Tentang author
 
 Halo saya <a href="https://facebook.com/rud.az.9" target="_blank">Rud Az</a>,
